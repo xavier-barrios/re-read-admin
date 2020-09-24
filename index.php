@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<title>Re-Read</title>
+<div class="logo"><h1>Re-Read</h1></div>
 
 <div class="header">
   <h1>Re-Read</h1>
