@@ -3,3 +3,5 @@ Pasos:
 1. Cambiamos la extensión de los ficheros .html a .php -> las rutas también!!
 2. Creamos registros en la base de datos para hacer pruebas
 3. Asociamos la base de datos con el proyecto
+4. Traemos (select) y pintamos (echo) las imágenes de los libros mediante una consulta a la base de datos
+5. Traemos (select) y pintamos (echo) los libros Top mediante una consulta a la base de datos
