@@ -2,7 +2,7 @@
 Evolucionamos la página estática asociada al proyecto [reread](https://dannylarrea.github.io/reread "Proyecto HTML reread") a una página dinámica utilizando ```PHP``` y una [base de datos](https://github.com/dannylarrea/reread-php/blob/dev/db/reread.sql)
 - Cambiamos la extensión de los ficheros .html a .php :bangbang: las rutas que se utilizan dentro de los ficheros también se han de cambiar!!
 - Asociamos la base de datos con el proyecto, para ello creamos el **connection.php**
-- Traemos ```SELECT``` y pintamos ```echo``` las imágenes de los libros mediante una consulta a la base de datos en el fichero **ebooks.php**
+- Traemos ```SELECT``` y pintamos ```echo``` las [imágenes de los libros](https://github.com/dannylarrea/reread-php/tree/dev/img) mediante una consulta a la base de datos en el fichero **ebooks.php**
 
 ## Lunes 28 de septiembre 2020. Evolutivo a desarrollar :loudspeaker:
 1. Una vez realizado correctamente los cambios de la primera semana de clases, se ha de crear un **pull request** de ```dev → master``` para actualizar la rama master con el código final de dev
