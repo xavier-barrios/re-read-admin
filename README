@@ -1,6 +1,0 @@
-Evolucionamos la página estática asociada al proyecto reread a una página dinámica utilizando php i una base de datos.
-Pasos:
-1. Cambiamos la extensión de los ficheros .html a .php -> las rutas también!!
-2. Asociamos la base de datos con el proyecto
-3. Traemos (select) y pintamos (echo) las imágenes de los libros mediante una consulta a la base de datos
-4. Traemos (select) y pintamos (echo) los libros Top mediante una consulta a la base de datos
