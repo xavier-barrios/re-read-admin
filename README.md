@@ -7,9 +7,9 @@ Evolucionamos la página estática asociada al proyecto reread a una página din
 ## Lunes 28 de septiembre 2020. Evolutivo a desarrollar :loudspeaker:
 1. Una vez realizado correctamente los cambios de la primera semana de clases, se ha de crear un pull request de **dev -> master** para actualizar la rama **master** con el código final de **dev**
 2. Hacer dinámico el apartado de Top ventas de la columna de la derecha:
-    1. Crear una nueva rama para el desarrollo: **topventas**
-    2. Query a utilizar en el desarrollo:
+    - Crear una nueva rama para el desarrollo: **topventas**
+    - Query a utilizar en el desarrollo:
     ```sql
     SELECT Books.Title FROM Books WHERE Top = '1'
     ```
-    3. Se ha de implementar este evolutivo en los tres ficheros .php: index.php, libros.php y ebooks.php
+    - Se ha de implementar este evolutivo en los tres ficheros .php: index.php, libros.php y ebooks.php
