@@ -33,8 +33,6 @@
   
   <div class="column side">
     <h2>Top ventas</h2>
-    <div class="column side">
-    <h2>Top ventas</h2>
     <p>Cien años de soledad.</p>
     <p>Crónica de una muerte anunciada.</p>
     <p>El otoño del patriarca.</p>
