@@ -1,6 +1,6 @@
 ## Semana del 21 - 25 de septiembre 2020 :white_check_mark:
 Evolucionamos la página estática asociada al proyecto reread a una página dinámica utilizando php i una base de datos
-- Cambiamos la extensión de los ficheros .html a .php. :exclamation::exclamation: las rutas que se utilizan dentro de los ficheros también se han de cambiar!!
+- Cambiamos la extensión de los ficheros .html a .php :bangbang: las rutas que se utilizan dentro de los ficheros también se han de cambiar!!
 - Asociamos la base de datos con el proyecto, para ello creamos el **connection.php**
 - Traemos (select) y pintamos (echo) las imágenes de los libros mediante una consulta a la base de datos en el fichero **ebooks.php**
 
@@ -13,3 +13,7 @@ Evolucionamos la página estática asociada al proyecto reread a una página din
     SELECT Books.Title FROM Books WHERE Top = '1'
     ```
     - Se ha de implementar este evolutivo en los tres ficheros .php: index.php, libros.php y ebooks.php
+
+### Recursos para escribir el fichero README.md:
+- https://github.com/tchapi/markdown-cheatsheet
+- https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
