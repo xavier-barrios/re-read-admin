@@ -16,7 +16,7 @@ Evolucionamos la página estática asociada al proyecto [reread](https://dannyla
         - index.php
         - libros.php
         - ebooks.php
-
+- - - -
 #### Recursos para escribir el fichero README.md:
 - https://github.com/tchapi/markdown-cheatsheet
 - https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
