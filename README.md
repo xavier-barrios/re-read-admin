@@ -5,7 +5,7 @@ Evolucionamos la página estática asociada al proyecto reread a una página din
 - Traemos (select) y pintamos (echo) las imágenes de los libros mediante una consulta a la base de datos en el fichero **ebooks.php**
 
 ## Lunes 28 de septiembre 2020. Evolutivo a desarrollar :loudspeaker:
-1. Una vez realizado correctamente los cambios de la primera semana de clases, se ha de crear un pull request de **dev → master** para actualizar la rama **master** con el código final de **dev**
+1. Una vez realizado correctamente los cambios de la primera semana de clases, se ha de crear un pull request de ```hash**dev → master**```para actualizar la rama **master** con el código final de **dev**
 2. Hacer dinámico el apartado de Top ventas de la columna de la derecha:
     - Crear una nueva rama para el desarrollo: **topventas**
     - Query a utilizar en el desarrollo:
