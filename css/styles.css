@@ -135,7 +135,7 @@ body {
 .gallery {
   padding: 20px;
   float: left;
-  width: 33%;
+  width: 33.3%;
 }
 
 .gallery img, .inlineImg img {
@@ -143,7 +143,8 @@ body {
 }
 
 div.desc {
-  padding: 15px;
+  padding: 5px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -160,7 +161,7 @@ div.gallery:hover{
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .column.side, .column.middle {
     width: 100%;
   }
@@ -174,7 +175,6 @@ div.gallery:hover{
     margin: auto;
     width: 80%;
   }
-
 }
 /*
 @media screen and (min-width: 600px) {

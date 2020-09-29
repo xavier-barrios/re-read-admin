@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
-
+<script src="../js/code.js"></script>
 </head>
-<body>
+<body onload="descriptionImg()">
 
 <div class="logo"><h1>Re-Read</h1></div>
 
@@ -39,14 +39,20 @@
       $result = mysqli_query($conn, "SELECT Books.Description, Books.img, Books.Title FROM Books WHERE eBook != '0'");
 
       if (!empty($result) && mysqli_num_rows($result) > 0) {
-      // datos de salida de cada fila	(fila = row)	
+      // datos de salida de cada fila	(fila = row)
+        $i=0;
         while ($row = mysqli_fetch_array($result)) {
+          $i++;
           echo "<div class='gallery'>";
           // Añadimos la imagen a la página con la etiqueta img de HTML
           echo "<img src=../img/".$row['img']." alt='".$row['Title']."'>";
-          // Añadimos el título a la página con la etiqueta h2 de HTML
-          //echo "<div class='desc'".$row['Title']." </div>";
+          // ---- Evolutivo:
+          echo "<div class='desc'>".$row['Description']." </div>";
+          // ---- Fin del evolutivo
           echo "</div>";
+          if ($i%3=='0') {
+            echo "<div style='clear:both;'></div>";
+          }
         }
       } else {
         echo "0 resultados";
@@ -56,12 +62,25 @@
   </div>
   <div class="column side">
     <h2>Top ventas</h2>
-    <p>Cien años de soledad.</p>
-    <p>Crónica de una muerte anunciada.</p>
-    <p>El otoño del patriarca.</p>
-    <p>El general en su laberinto.</p>
+    <?php
+      // 1. Conexión con la base de datos	
+      //include '../services/connection.php';
+
+      // 2. Selección y muestra de datos de la base de datos
+      $result = mysqli_query($conn, "SELECT Books.Title FROM Books WHERE eBook != '0'");
+
+      if (!empty($result) && mysqli_num_rows($result) > 0) {
+      // datos de salida de cada fila	(fila = row)
+        while ($row = mysqli_fetch_array($result)) {
+          echo "<p>".$row['Title']."</p>";
+        }
+      } else {
+        echo "0 resultados";
+      }
+      ?>
   </div>
 </div>
-  
+
+
 </body>
 </html>
