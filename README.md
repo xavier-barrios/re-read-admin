@@ -13,7 +13,8 @@ Evolucionamos la página estática asociada al proyecto [reread](https://dannyla
         - index.php
         - libros.php
         - ebooks.php
-3. Crear un formulario en el fichero **ebooks.php** para filtrar ebooks por autor y país
+3. Editar el registro con campo **Name** igual a **Varios autores** para añadir **Otros** en el campo **Country** (registro asociado a la tabla **Authors**)
+4. Crear un formulario en el fichero **ebooks.php** para filtrar ebooks por autor y país
 ![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/dev/BackupRandom/form.png "form")
 
 - - - -
