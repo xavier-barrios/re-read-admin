@@ -17,7 +17,7 @@ Evolucionamos la página estática asociada al proyecto [reread](https://dannyla
 4. Editar el registro con campo **Name** igual a **Varios autores** para añadir **Otros** en el campo **Country** (registro asociado a la tabla **Authors** de la base de datos utilizada en el proyecto)
 5. En una nueva rama ```dev``` se ha de desarrollar la creación de un formulario dentro del fichero **ebooks.php** para filtrar ebooks por **autor** y **país**
 ![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/dev/BackupRandom/form.png "form")
-6. Una vez realizado correctamente el desarrollo del formulario, se ha de crear un **pull request** de ```dev → master``` para actualizar la rama master con el código final de dev. Posteriormente eliminar la rama dev (tanto en GitHub como en local)
+6. Una vez realizado correctamente el desarrollo del formulario, se ha de crear un **pull request** de ```dev → master``` para actualizar la rama master con el código final de dev. Posteriormente, eliminar la rama dev (tanto en GitHub como en local)
 
 - - - -
 #### Recursos para escribir el fichero README.md:
