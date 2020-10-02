@@ -5,9 +5,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!--
 <script src="../js/code.js"></script>
+-->
 </head>
-<body onload="descriptionImg()">
+<body>
 
 <div class="logo"><h1>Re-Read</h1></div>
 
@@ -30,31 +32,37 @@
         <form action="ebooks.php" method="POST">
           <label for="fautor">Autor</label>
           <input type="text" id="fautor" name="fautor" placeholder="Introduce el autor...">
-          <!-- <label for="lname">Last Name</label>
+          <!--
+          <label for="lname">Last Name</label>
           <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-          <label for="country">Country</label>
+          -->
+          <label for="country">País</label>
           <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select> -->
+            <option value="%">Todos los paises</option>
+            <?php
+            // 1. Conexión con la base de datos	
+            include '../services/connection.php';
+            $query="SELECT DISTINCT Authors.Country FROM Authors";
+            $result=mysqli_query($conn, $query);
+            //Continuará...
+            echo '<option value="canada"></option>';
+            ?>
+          </select>
           <input type="submit" value="Buscar">
         </form>
       </div>
       <?php
-      // 1. Conexión con la base de datos	
-      include '../services/connection.php';
       if(isset($_POST['fautor'])){
         //filtrará los ebooks que se mostrarán en la página
         $query="SELECT Books.Description, Books.img, Books.Title 
         FROM Books INNER JOIN BooksAuthors ON Id=BooksAuthors.BookId
         INNER JOIN Authors ON Authors.Id = BooksAuthors.AuthorId
         WHERE Authors.Name LIKE '%{$_POST['fautor']}%'";
-        echo $query;
         $result = mysqli_query($conn, $query);
       }else {
         //mostrará todos los ebooks de la DB 
-        $result = mysqli_query($conn, "SELECT Books.Description, Books.img, Books.Title FROM Books WHERE eBook != '0'");
+        $result = mysqli_query($conn, "SELECT Books.Description, Books.img, Books.Title 
+        FROM Books WHERE eBook != '0'");
       }
 
       if (!empty($result) && mysqli_num_rows($result) > 0) {
@@ -66,7 +74,7 @@
           // Añadimos la imagen a la página con la etiqueta img de HTML
           echo "<img src=../img/".$row['img']." alt='".$row['Title']."'>";
           // ---- Evolutivo:
-          echo "<div class='desc'>".$row['Description']." </div>";
+          // echo "<div class='desc'>".$row['Description']." </div>";
           // ---- Fin del evolutivo
           echo "</div>";
           if ($i%3=='0') {
@@ -76,12 +84,8 @@
       } else {
         echo "0 resultados";
       }
- 
-      
-      
       ?>
-
-
+      
     </div>
   </div>
   <div class="column side">
