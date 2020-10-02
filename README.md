@@ -4,7 +4,7 @@ Evolucionamos la página estática asociada al proyecto [reread](https://dannyla
 - Asociamos la base de datos con el proyecto, para ello creamos el **connection.php**
 - Editamos el fichero **ebooks.php**: pintamos (con la ayuda del ```echo```) las [imágenes de los libros](https://github.com/dannylarrea/reread-php/tree/dev/img) recuperadas mediante una consulta en la base de datos
 
-## Semana del 28 de septiembre - 2 de octubre del 2020 (evolutivo a desarrollar) :mega::mega::mega:
+## Semana del 28 de septiembre - 2 de octubre del 2020 (evolutivo a desarrollar) :mega::mega:
 **PHP**
 1. Una vez realizado correctamente los cambios de la primera semana de clases, se ha de crear un **pull request** de ```dev → master``` para actualizar la rama master con el código final de dev
 2. Hacer dinámico el apartado **Top ventas** (columna de la derecha):
@@ -13,8 +13,10 @@ Evolucionamos la página estática asociada al proyecto [reread](https://dannyla
         - index.php
         - libros.php
         - ebooks.php
-3. Editar el registro con campo **Name** igual a **Varios autores** para añadir **Otros** en el campo **Country** (registro asociado a la tabla **Authors**)
-4. Crear un formulario en el fichero **ebooks.php** para filtrar ebooks por autor y país
+3. Una vez realizado correctamente el desarrollo de **Top ventas**, se ha de crear un **pull request** de ```topventas → master``` para actualizar la rama master con el código final de topventas
+- - - -
+4. Editar el registro con campo **Name** igual a **Varios autores** para añadir **Otros** en el campo **Country** (registro asociado a la tabla **Authors** de la base de datos utilizada en el proyecto)
+5. En una nueva rama ```dev``` se ha de desarrollar la creación de un formulario dentro del fichero **ebooks.php** para filtrar ebooks por **autor** y **país**
 ![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/dev/BackupRandom/form.png "form")
 
 - - - -
