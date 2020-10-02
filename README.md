@@ -14,7 +14,7 @@ Evolucionamos la página estática asociada al proyecto [reread](https://dannyla
         - libros.php
         - ebooks.php
 3. Crear un formulario en el fichero **ebooks.php** para filtrar por autor y país
-![picture alt](http://via.placeholder.com/200x150 "form")
+![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/dev/BackupRandom/form.png "form")
 
 - - - -
 #### Recursos para escribir el fichero README.md:
