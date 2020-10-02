@@ -42,10 +42,11 @@
             <?php
             // 1. Conexión con la base de datos	
             include '../services/connection.php';
-            $query="SELECT DISTINCT Authors.Country FROM Authors";
+            $query="SELECT DISTINCT Authors.Country FROM Authors ORDER BY Country";
             $result=mysqli_query($conn, $query);
-            //Continuará...
-            echo '<option value="canada"></option>';
+            while ($row = mysqli_fetch_array($result)) {
+              echo '<option value="'.$row[Country].'">'.$row[Country].'</option>';
+            }
             ?>
           </select>
           <input type="submit" value="Buscar">
@@ -57,7 +58,8 @@
         $query="SELECT Books.Description, Books.img, Books.Title 
         FROM Books INNER JOIN BooksAuthors ON Id=BooksAuthors.BookId
         INNER JOIN Authors ON Authors.Id = BooksAuthors.AuthorId
-        WHERE Authors.Name LIKE '%{$_POST['fautor']}%'";
+        WHERE Authors.Name LIKE '%{$_POST['fautor']}%'
+        AND Authors.Country LIKE '{$_POST['country']}'";
         $result = mysqli_query($conn, $query);
       }else {
         //mostrará todos los ebooks de la DB 
