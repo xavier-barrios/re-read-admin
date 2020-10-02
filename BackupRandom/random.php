@@ -1,3 +1,4 @@
+<!--ebooks.php-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,32 +33,39 @@
           <input type="text" id="fautor" name="fautor" placeholder="Introduce el autor...">
           <!-- <label for="lname">Last Name</label>
           <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select> -->
+          -->
+          <?php
+          // 1. Conexión con la base de datos	
+          include '../services/connection.php';
+          $result = mysqli_query($conn, "SELECT DISTINCT Authors.Country FROM Authors ORDER BY Country");
+          echo '<label for="fcountry">País</label>';
+          echo '<select id="fcountry" name="fcountry">';
+          echo '<option value="%">Todos los paises</option>';
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<option value="'.$row['Country'].'">'.$row['Country'].'</option>';
+          }
+          echo '</select>';
+          ?>
           <input type="submit" value="Buscar">
         </form>
       </div>
       <?php
-      // 1. Conexión con la base de datos	
-      include '../services/connection.php';
       if(isset($_POST['fautor'])){
         //filtrará los ebooks que se mostrarán en la página
+        // 2. Selección y muestra de datos de la base de datos
+        $query="SELECT Books.img, Books.Description, Books.Title FROM 
+        ((BooksAuthors INNER JOIN Authors ON BooksAuthors.AuthorId=Authors.Id) 
+        INNER JOIN Books ON BooksAuthors.BookId=Books.Id) 
+        WHERE Authors.Name LIKE '%".$_POST['fautor']."%' AND Authors.Country LIKE '".$_POST['fcountry']."'";
+        echo $query;
+        $result = mysqli_query($conn, $query);
+             
       }else {
         //mostrará todos los ebooks de la DB
-
-        
+        // 2. Selección y muestra de datos de la base de datos
+        $result = mysqli_query($conn, "SELECT Books.Description, Books.Title, Books.img, Books.Title FROM Books WHERE eBook != '0'");
       }
- 
-      // 1. Conexión con la base de datos	
-      include '../services/connection.php';
-
-      // 2. Selección y muestra de datos de la base de datos
-      $result = mysqli_query($conn, "SELECT Books.Description, Books.img, Books.Title FROM Books WHERE eBook != '0'");
-
+        
       if (!empty($result) && mysqli_num_rows($result) > 0) {
       // datos de salida de cada fila	(fila = row)
         $i=0;
@@ -77,7 +85,7 @@
       } else {
         echo "0 resultados";
       }
-      
+
       ?>
 
 
@@ -103,5 +111,7 @@
       ?>
   </div>
 </div>
+
+
 </body>
 </html>
