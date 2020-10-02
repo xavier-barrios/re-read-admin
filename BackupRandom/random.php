@@ -56,7 +56,7 @@
         $query="SELECT Books.img, Books.Description, Books.Title FROM 
         ((BooksAuthors INNER JOIN Authors ON BooksAuthors.AuthorId=Authors.Id) 
         INNER JOIN Books ON BooksAuthors.BookId=Books.Id) 
-        WHERE Authors.Name LIKE '%".$_POST['fautor']."%' AND Authors.Country LIKE '".$_POST['fcountry']."'";
+        WHERE Authors.Name LIKE '%".$_POST['fautor']."%' AND Authors.Country LIKE '".$_POST['fcountry']."' AND eBook != '0'";
         echo $query;
         $result = mysqli_query($conn, $query);
              
@@ -111,7 +111,5 @@
       ?>
   </div>
 </div>
-
-
 </body>
 </html>
