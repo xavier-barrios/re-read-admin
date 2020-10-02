@@ -18,8 +18,6 @@ Evolucionamos la página estática asociada al proyecto [reread](https://dannyla
 5. En una nueva rama ```dev``` se ha de desarrollar la creación de un formulario dentro del fichero **ebooks.php** para filtrar ebooks por **autor** y **país**
 ![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/dev/BackupRandom/form.png "form")
 6. Una vez realizado correctamente el desarrollo del formulario, se ha de crear un **pull request** de ```dev → master``` para actualizar la rama master con el código final de dev i eliminar la rama dev (eliminarla en GitHub y en local)
-7. Desarrollar, en una nueva rama ```dev```, el siguiente evolutivo
-![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/dev/BackupRandom/form%20%2B%20title.png "form")
 
 - - - -
 #### Recursos para escribir el fichero README.md:

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Re-Read ebooks</title>
+<title>Re-Read | ebooks</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
@@ -73,7 +73,7 @@
           echo "<div class='gallery'>";
           // Añadimos la imagen a la página con la etiqueta img de HTML
           echo "<img src=../img/".$row['img']." alt='".$row['Title']."'>";
-          // ---- Evolutivo:
+          // ---- Evolutivo
           // echo "<div class='desc'>".$row['Description']." </div>";
           // ---- Fin del evolutivo
           echo "</div>";
@@ -85,7 +85,7 @@
         echo "0 resultados";
       }
       ?>
-      
+
     </div>
   </div>
   <div class="column side">
