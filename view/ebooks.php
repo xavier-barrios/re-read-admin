@@ -46,20 +46,14 @@
       include '../services/connection.php';
       if(isset($_POST['fautor'])){
         //filtrará los ebooks que se mostrarán en la página
+        $result = mysqli_query($conn, "SELECT Books.Description, Books.img, Books.Title FROM Books WHERE eBook != '0'");
       }else {
-        //mostrará todos los ebooks de la DB
-
-        
+        //mostrará todos los ebooks de la DB 
+        $result = mysqli_query($conn, "SELECT Books.Description, Books.img, Books.Title FROM Books WHERE eBook != '0'");
       }
- 
-      // 1. Conexión con la base de datos	
-      include '../services/connection.php';
-
-      // 2. Selección y muestra de datos de la base de datos
-      $result = mysqli_query($conn, "SELECT Books.Description, Books.img, Books.Title FROM Books WHERE eBook != '0'");
 
       if (!empty($result) && mysqli_num_rows($result) > 0) {
-      // datos de salida de cada fila	(fila = row)
+        // datos de salida de cada fila	(fila = row)
         $i=0;
         while ($row = mysqli_fetch_array($result)) {
           $i++;
@@ -77,6 +71,8 @@
       } else {
         echo "0 resultados";
       }
+ 
+      
       
       ?>
 

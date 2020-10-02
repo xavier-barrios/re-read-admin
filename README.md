@@ -14,12 +14,11 @@ Evolucionamos la página estática asociada al proyecto [reread](https://dannyla
         - libros.php
         - ebooks.php
 3. Una vez realizado correctamente el desarrollo de **Top ventas**, se ha de crear un **pull request** de ```topventas → master``` para actualizar la rama master con el código final de topventas
-- - - -
 4. Editar el registro con campo **Name** igual a **Varios autores** para añadir **Otros** en el campo **Country** (registro asociado a la tabla **Authors** de la base de datos utilizada en el proyecto)
 5. En una nueva rama ```dev``` se ha de desarrollar la creación de un formulario dentro del fichero **ebooks.php** para filtrar ebooks por **autor** y **país**
 ![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/dev/BackupRandom/form.png "form")
+6. Una vez realizado correctamente el desarrollo del formulario, se ha de crear un **pull request** de ```dev → master``` para actualizar la rama master con el código final de dev i eliminar la rama dev (eliminarla en GitHub y en local)
 
-- - - -
 #### Recursos para escribir el fichero README.md:
 - https://github.com/tchapi/markdown-cheatsheet
 - https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
