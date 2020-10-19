@@ -9,7 +9,7 @@
 <body>
 
 <?php
-require_once '../controller/sessionController.php';
+// require_once '../controller/sessionController.php';
 ?>
 
 <div class="row">
@@ -20,7 +20,7 @@ require_once '../controller/sessionController.php';
     <div class="textpage">
       <!--Ver todos los libros-->      
       <?php
-      require_once '../controller/librosController.php';
+      // require_once '../controller/librosController.php';
       ?>
     </div>
   </div>
@@ -40,7 +40,7 @@ require_once '../controller/sessionController.php';
             <option value="%">---</option>
             <?php
             // Valores del campo select
-            require_once '../controller/autoresController.php';
+            // require_once '../controller/autoresController.php';
             ?>
         </select>
         <label for="country">País</label>
@@ -48,7 +48,7 @@ require_once '../controller/sessionController.php';
             <option value="%">---</option>
             <?php
             // Valores del campo select
-            require_once '../controller/paisesController.php';
+            // require_once '../controller/paisesController.php';
             ?>
         </select>
         <!--checkbox-->
