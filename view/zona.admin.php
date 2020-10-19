@@ -9,7 +9,7 @@
 <body>
 
 <?php
-// require_once '../controller/sessionController.php';
+require_once '../controller/sessionController.php';
 ?>
 
 <div class="row">
