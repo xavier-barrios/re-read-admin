@@ -10,4 +10,4 @@ Evolucionamos el proyecto **reread-php** a **reread-admin**. Para ello creamos u
 # JS
 - Añadimos una validación al formulario del login que:
     - Muestre dentro del ```<div id="message"></div>``` un mensaje indicando qué campo se encuentra sin informar.
-    - Muestre el borde de los campos imputs en rojo indicando qué campo se encuentra sin informar.
+    - Muestre el borde de los campos imputs en rojo indicando qué campo se encuentra sin informar (si están informados que utilize el color inicial).

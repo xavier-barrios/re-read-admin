@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
 <link href="../css/fontawesome-free-5.15.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
-
 </head>
 <body>
 
@@ -15,10 +14,10 @@
     <h2 style="text-align: center; margin: 20% 0 0 0;">Re-Read</h2>
     <div class="form" style="margin:10%;">
         <form action="../controller/loginController.php" method="POST">
-          <label for="fautor">Nombre de usuario</label>
+          <label for="email">Usuario</label>
           <input type="text" id="email" name="email" placeholder="Usuario...">
           
-          <label for="lname">Contraseña</label>
+          <label for="psswd">Contraseña</label>
           <input type="password" id="psswd" name="psswd" placeholder="Contraseña...">
           
           <input type="submit" value="Iniciar sesión">
