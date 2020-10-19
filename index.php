@@ -1,2 +1,2 @@
 <?php
-header('Location: view/zone.admin.php');
+header('Location: view/login.php');
