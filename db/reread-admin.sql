@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-09-2020 a las 11:29:40
+-- Tiempo de generación: 18-10-2020 a las 07:06:25
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -18,8 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `reread`
+-- Base de datos: `reread-admin`
 --
+CREATE DATABASE IF NOT EXISTS `reread-admin` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+USE `reread-admin`;
 
 -- --------------------------------------------------------
 
@@ -39,7 +41,7 @@ CREATE TABLE `Authors` (
 
 INSERT INTO `Authors` (`Id`, `Name`, `Country`) VALUES
 (1, 'Gabriel García Márquez', 'Colombia'),
-(2, 'Varios autores', ''),
+(2, 'Varios autores', 'Otros'),
 (3, 'Mercedes Franco', 'Venezuela'),
 (4, 'Vicenç Pagès Jordà', 'España'),
 (6, 'Jordi Gracia Garcia', 'España'),
@@ -104,6 +106,26 @@ INSERT INTO `BooksAuthors` (`AuthorId`, `BookId`) VALUES
 (2, 9),
 (4, 12);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Users`
+--
+
+CREATE TABLE `Users` (
+  `Id` int(11) NOT NULL,
+  `Email` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `Pass` varchar(250) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `Users`
+--
+
+INSERT INTO `Users` (`Id`, `Email`, `Pass`) VALUES
+(1, 'random@random.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(2, 'test@test.com', '81dc9bdb52d04dc20036dbd8313ed055');
+
 --
 -- Índices para tablas volcadas
 --
@@ -128,6 +150,12 @@ ALTER TABLE `BooksAuthors`
   ADD KEY `BookId` (`BookId`);
 
 --
+-- Indices de la tabla `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -142,6 +170,12 @@ ALTER TABLE `Authors`
 --
 ALTER TABLE `Books`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT de la tabla `Users`
+--
+ALTER TABLE `Users`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
