@@ -1,7 +1,7 @@
 ## Semana del 19 - 23 de octubre del 2020 :mega::mega:
 # PHP
 Evolucionamos el proyecto **reread-php** a **reread-admin**. Para ello creamos un repositorio a partir de la importación del repo https://github.com/dannylarrea/reread-admin.git
-- Modificamos el proyecto para que utilize el patrón de diseño MVC (utilizamos el desarrollo login-MVC hecho con Sergio).
+- Modificamos el proyecto para que utilice el patrón de diseño MVC (utilizamos el desarrollo login-MVC hecho con Sergio).
 - Modificaremos la función ```login($user)```, pasaremos como variable ```$user``` y dentro de esta función asignaremos los atributos ```id``` y ```name```.
 - Utilizaremos también el desarrollo asociado a sesiones. Dentro de la función ```login($user)``` se creará la sesión, definiremos únicamente una variable de sesión ```$_SESSION['user']``` en la que guardaremos la variable ```$user``` inicializada a partir del objeto ```user```, el cual debe de contener, además de los atributos ya asignados (```email``` y ```password```) , los atributos:
     - Id
