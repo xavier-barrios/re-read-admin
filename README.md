@@ -1,27 +1,69 @@
-## Semana del 21 - 25 de septiembre del 2020 :white_check_mark:
-Evolucionamos la página estática asociada al proyecto [reread](https://dannylarrea.github.io/reread "Proyecto HTML reread") a una página dinámica utilizando ```PHP``` y una [BBDD](https://github.com/dannylarrea/reread-php/blob/dev/db/reread.sql)
-- Cambiamos la extensión de los ficheros .html a .php :bangbang: las rutas que se utilizan dentro de los ficheros también se han de cambiar!!
-- Asociamos la base de datos con el proyecto, para ello creamos el **connection.php**
-- Editamos el fichero **ebooks.php**: pintamos (con la ayuda del ```echo```) las [imágenes de los libros](https://github.com/dannylarrea/reread-php/tree/dev/img) recuperadas mediante una consulta en la base de datos
+## Semana del 19 - 23 de octubre del 2020 :mega::mega:
+Evolucionamos el proyecto *reread-php* a ***reread-admin***:
+- Modificamos el proyecto para que utilize el patrón de diseño MVC (utilizamos el desarrollo login-MVC).
+- Utilizamos el desarrollo asociado a sesiones.
+- Estructura de directorios y ficheros que ha de tener al final del desarrollo el nuevo proyecto:
+    ```
 
-## Semana del 28 de septiembre - 2 de octubre del 2020 (evolutivo a desarrollar) :mega::mega:
-**PHP**
-1. Una vez realizado correctamente los cambios de la primera semana de clases, se ha de crear un **pull request** de ```dev → master``` para actualizar la rama master con el código final de dev
-2. Hacer dinámico el apartado **Top ventas** (columna de la derecha):
-    - Crear una nueva rama en GitHub para el desarrollo: **topventas** (recordad en local hacer ```git pull``` para bajar la rama)
-    - Se ha de implementar este evolutivo en los tres ficheros .php:
-        - index.php
-        - libros.php
-        - ebooks.php
-3. Una vez realizado correctamente el desarrollo de **Top ventas**, se ha de crear un **pull request** de ```topventas → master``` para actualizar la rama master con el código final de topventas
-4. Editar el registro con campo **Name** igual a **Varios autores** para añadir **Otros** en el campo **Country** (registro asociado a la tabla **Authors** de la base de datos utilizada en el proyecto)
-5. En una nueva rama ```dev``` se ha de desarrollar la creación de un formulario dentro del fichero **ebooks.php** para filtrar ebooks por **autor** y **país**
-![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/master/BackupRandom/form.png "formulario: autor y país")
-6. Una vez realizado correctamente el desarrollo del formulario, se ha de crear un **pull request** de ```dev → master``` para actualizar la rama master con el código final de dev. Posteriormente, eliminar la rama dev (tanto en GitHub como en local)
-7. Desarrollar, en una nueva rama ```form```, el siguiente evolutivo
-![picture alt](https://raw.githubusercontent.com/dannylarrea/reread-php/master/BackupRandom/form%20%2B%20title.png "formulario: autor, título y país")
+    ```
+Algunos pasos de desarrollo:
+- Desarrollar en una nueva rama ```dev``` el evolutivo.
+- Añadir un enlace a login en el fichero ```index.php```:
+    ```HTML
+    <!--HTML a modificar en index.php-->
+    <div class="logo"><h1>Re-Read</h1><h1 style="float: right;"><a href="view/login.php">Login</a></h1></div>
+    ```
+    ```CSS
+    /* Estilos a modificar/crear en css/styles.css */
+    .logo {
+        background-color: #0B5345;
+        color: white;
+        padding: 5px;
+        font-size: 10px;
+        overflow: hidden;
+    }
 
-- - - -
-#### Recursos para escribir el fichero README.md:
-- https://github.com/tchapi/markdown-cheatsheet
-- https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+    .logo h1 {
+        float: left;
+        display: block;
+    }
+
+    .logo a {
+        text-decoration: none;
+        color: white;
+    }
+    ```
+- En el apartado **M7: PHP** del Moodle, dentro de la carpeta **Materials**, se encuentran dos ficheros:
+    1. **login.php** (su ubicación en el nuevo proyecto ha de ser ```view/login```).
+    2. **re-read-tienda.jpg** (su ubicación en el nuevo proyecto ha de ser ```img/```).
+- Añadir los siguientes estilos al CSS:
+    ```CSS
+    /* Two columns (CSS)*/
+    .column.left,
+    .column.right {
+        width: 50%;
+        font-size: 15px;
+    }
+    ````
+    ```CSS
+    /* ...Responsive layout (CSS media queries)... */
+    .column.right{
+        display: none;
+    }
+    .column.left{
+        width: 100%;
+    }
+    ```
+- Extender la base de datos para utilizar usuarios en la aplicación. Dentro de la carpeta **Materials**, se encuentra la base de datos a importar (**reread-admin.sql** ya contiene la sentencia ```CREATE DATABASE```).
+- Para el apartado **Top ventas** (```index.php```, ```libros.php``` y ```ebooks.php```) se ha de utilizar:
+    ```PHP
+    $query = "SELECT Books.Title FROM Books WHERE eBook != '0'";
+    $sentencia=$pdo->prepare($query);
+    ...
+    ...
+    ```
+- Una vez realizado, y visto que funcione, el apartado Top ventas, se ha de crear una función llamada ```topVentas($pdo)``` en el fichero ```model/functions.php``` que devuelva un string con el HTML asociado:
+    - HTML asociado a la lista de libros, o
+    - 0 resultados
+- Dentro del fichero ```ebooks.php``` se ha de modificar la sección de filtros y la muestra de registros para que utilice la conección con ```$pdo```.
+- ...
