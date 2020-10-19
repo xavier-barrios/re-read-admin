@@ -145,7 +145,16 @@ body {
 }
 
 
-/* left column */
+/* left and right column */
+
+.column.left,
+.column.right {
+    width: 50%;
+    font-size: 15px;
+}
+
+
+/* middle column */
 
 .column.middle {
     width: 66.6%;
