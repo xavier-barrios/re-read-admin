@@ -220,6 +220,12 @@ div.gallery:hover {
         margin: auto;
         width: 80%;
     }
+    .column.right {
+        display: none;
+    }
+    .column.left {
+        width: 100%;
+    }
 }
 
 
