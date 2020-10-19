@@ -2,6 +2,7 @@
 # PHP
 Evolucionamos el proyecto **reread-php** a **reread-admin**. Para ello creamos un repositorio a partir de la importación del repo https://github.com/dannylarrea/reread-admin.git
 - Modificamos el proyecto para que utilize el patrón de diseño MVC (utilizamos el desarrollo login-MVC hecho con Sergio).
+    - Modificaremos la función ```login($user)```, pasaremos como variable un usuario y dentro de esta función asignaremos los atributos id y name al usuario.
 - Utilizaremos también el desarrollo asociado a sesiones. Definiremos únicamente una variable de sesión ```$_SESSION['user']``` en la que guardaremos la variable ```$user``` inicializada a partir del objeto ```user```, el cual debe de contener, además de los atributos ya asignados (```email``` y ```password```) , los atributos:
     - Id
     - Name
