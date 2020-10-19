@@ -6,3 +6,6 @@ Evolucionamos el proyecto **reread-php** a **reread-admin**. Para ello creamos u
     - Id
     - Name
 - Importamos la base de datos para utilizar usuarios en la aplicación. Dentro de la carpeta **Materials** ubicada en el Moodle del módulo, se encuentra la base de datos a importar (**reread-admin.sql** ya contiene la sentencia ```CREATE DATABASE```).
+
+# JS
+
