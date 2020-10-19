@@ -40,6 +40,16 @@ body {
     font-size: 10px;
 }
 
+.logo h1 {
+    float: left;
+    display: block;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
 
 /* Estilo del encabezado */
 
