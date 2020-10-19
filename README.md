@@ -8,4 +8,5 @@ Evolucionamos el proyecto **reread-php** a **reread-admin**. Para ello creamos u
 - Importamos la base de datos para utilizar usuarios en la aplicación. Dentro de la carpeta **Materials** ubicada en el Moodle del módulo, se encuentra la base de datos a importar (**reread-admin.sql** ya contiene la sentencia ```CREATE DATABASE```).
 
 # JS
-
+- Añadimos una validación al formulario del login que:
+    1. Indique dentro de ```<div id="message"></div>``` un mensaje indicando qué campo se encuentra sin informar.
