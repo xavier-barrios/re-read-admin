@@ -24,6 +24,7 @@
           <input type="submit" value="Iniciar sesión">
         </form>
     </div>
+    <div id="message"></div>
   </div>
   
   <div class="column right" style="background-image: url('../img/re-read-tienda.jpg'); height:100vh">
