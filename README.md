@@ -9,4 +9,4 @@ Evolucionamos el proyecto **reread-php** a **reread-admin**. Para ello creamos u
 
 # JS
 - Añadimos una validación al formulario del login que:
-    - Indique dentro de ```<div id="message"></div>``` un mensaje indicando qué campo se encuentra sin informar.
+    - Indique dentro del ```<div id="message"></div>``` un mensaje indicando qué campo se encuentra sin informar.
